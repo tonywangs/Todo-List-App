@@ -14,7 +14,8 @@ function Todo({ todo }) {
       completed: !todo.completed
     })
   }
-  function deleteTodo() {
+  
+  function deleteTodo() { 
     const todoRef = firebase.database().ref('todo')
     todoRef.child(todo.id).remove()
   }
